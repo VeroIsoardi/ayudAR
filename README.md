@@ -1,17 +1,31 @@
 # AyudAR
-### Trabajo para la materia Proyecto de Software de la Licenciatura en Sistemas, UNLP.
-Consistió en el desarrollo de un prototipo que brinda información a lxs ciudadanxs de la provincia de Buenos Aires, respecto de los centros de donación
-(ropa, comida, plasma o sangre) georeferenciados con el horario de apertura, fases en las que se encuentra cada municipio, teléfono, email, etc.
-El sistema consta de dos aplicaciones, aplicación privada y aplicación pública.
-En la aplicación privada se pueden realizar todas las operaciones administrativas del sistema (CRUD de usuarios, de centros de ayuda social, módulo de 
-configuración del sistema, etc). 
-Y en la aplicación pública, se puede visualizar la información de interés para lxs ciudadanxs, es decir, ver centros y sacar turno, agregar un centro, y 
-ver las estadísticas del sitio, etc.
 
----
-***Aplicación pública con Vue.js***
-  > https://grupo21.proyecto2020.linti.unlp.edu.ar/
-  
-***Aplicación privada con Python, Flask, HTML, CSS, JavaScript y Bootstrap***
-  > https://admin-grupo21.proyecto2020.linti.unlp.edu.ar/
-  
+A prototype that helps people in Buenos Aires province find donation centres (clothes, food, plasma, blood): where they are on a map, opening hours, contact details and each municipality's lockdown phase, plus booking a visit.
+
+Built by a team of 4 for *Proyecto de Software* (Licenciatura en Sistemas, UNLP, 2020).
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js_2-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+
+## Two apps
+
+- **Public app** ([`web/`](web/), Vue.js): browse centres, book a visit, suggest a new centre, see site statistics.
+- **Admin app** ([`app/`](app/), Flask + Bootstrap): user management, donation-centre CRUD, system configuration.
+
+Both were deployed on the university's servers during the course; those deployments are no longer online.
+
+## Run it
+
+```bash
+# Admin app + API
+pip install -r requirements.txt
+python run.py
+
+# Public app
+cd web
+npm install
+npm run serve
+```
